@@ -95,14 +95,14 @@ namespace DescargaImagenesV1._0
                     var rutaArchivo = Path.Combine(carpetaDestino, nombreArchivo);
 
                     // Simulación de descarga (30 segundos)
-                    MessageBox.Show($"Iniciando la simulación de descarga para {nombreDescarga}. Esta tomará 30 segundos.", "Simulación de Descarga");
+                    MessageBox.Show($"Iniciando la simulación de descarga para {nombreDescarga}. Esta tomará 40 segundos.", "Simulación de Descarga");
                     for (int i = 0; i <= 100; i++)
                     {
                         progressBar.Invoke(new Action(() =>
                         {
                             progressBar.Value = i;
                         }));
-                        Thread.Sleep(300); // 300 ms * 100 iteraciones = 30 segundos
+                        Thread.Sleep(400); // 400 ms * 100 iteraciones = 40 segundos
                     }
 
                     // Descargar la imagen real después de la simulación
